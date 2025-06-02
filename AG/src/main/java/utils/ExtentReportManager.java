@@ -9,8 +9,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class ExtentReportManager {
     private static ExtentReports extent;
@@ -19,18 +17,13 @@ public class ExtentReportManager {
 
     public static ExtentReports getReportInstance() {
         if (extent == null) {
-
-            String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
-            String reportPath = "reports/ExtentReport_" + timestamp + ".html";
-            ExtentSparkReporter reporter = new ExtentSparkReporter(reportPath);
-
-            reporter.config().setDocumentTitle("Automation Test Report");
-            reporter.config().setReportName("Test Output Report");
+            ExtentSparkReporter sparkReporter = new ExtentSparkReporter("reports/ExtentReport.html");
+            sparkReporter.config().setReportName("UI Test Report");
+            sparkReporter.config().setDocumentTitle("Automation Report");
 
             extent = new ExtentReports();
-            extent.attachReporter(reporter);
+            extent.attachReporter(sparkReporter);
         }
-
         return extent;
     }
 
