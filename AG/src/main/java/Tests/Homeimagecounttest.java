@@ -37,8 +37,8 @@ public class Homeimagecounttest {
         test = extent.createTest("Image Count on Home Page");
 
         try {
-            String url = "https://weisetech.dev/adventuregamers/";
-            driver.get(url);
+//            String url = "https://weisetech.dev/adventuregamers/";
+            driver.get("https://development:development@weisetech.dev/adventuregamers/daily-deals/");
 
             Thread.sleep(2000);
 
