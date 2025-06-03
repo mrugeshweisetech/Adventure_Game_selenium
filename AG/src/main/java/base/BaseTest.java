@@ -38,7 +38,7 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         Logs.info("Navigating to URL...");
-        driver.get("https://admin-demo.nopcommerce.com/login");
+        driver.get("https://development:development@weisetech.dev/adventuregamers/daily-deals/");
 
         // Initialize ExtentTest for the current test method
         tests = extent.createTest(method.getName());
