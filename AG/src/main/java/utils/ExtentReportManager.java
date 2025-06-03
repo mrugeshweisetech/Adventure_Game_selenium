@@ -30,8 +30,8 @@ public class ExtentReportManager {
             reporter.config().setReportName("Test Output Report");
 
             extent = new ExtentReports();
-            ExtentObserver Reporter = null;
-            extent.attachReporter(Reporter);
+            ExtentObserver spark = null;
+            extent.attachReporter(spark);
         }
         return extent;
     }
