@@ -4,7 +4,7 @@
 <suite name="AGSuitProject ">
     <test name="Home Page Test">
         <classes>
-            <class name = "Tests.Navbardropdowntest"/>
+            <class name = "Tests.Homepagevideotest"/>
         </classes>
     </test>
 </suite>
