@@ -5,7 +5,8 @@
     <test name="Home Page Test">
         <classes>
             <class name = "Tests.Navbardropdowntest"/>
-        </classes></test>
+        </classes>
+    </test>
 </suite>
 
 
