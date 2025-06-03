@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Automation Report</title>
+<title>Image Count Test</title>
 <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
@@ -32,10 +32,10 @@
 </ul>
 <ul class="nav-right">
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">UI Test Report</span></a>
+<a href="#"><span class="badge badge-primary">Automation Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jun 2, 2025 06:24:03 pm</span></a>
+<a href="#"><span class="badge badge-primary">Jun 3, 2025 11:10:58 am</span></a>
 </li>
 </ul>
 </div>
@@ -79,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Click All Links on Homepage</p>
+            <p class="name">Image Count on Home Page</p>
             <p class="text-sm">
-              <span>6:24:07 pm</span> / <span>00:00:02:876</span>
+              <span>11:11:02 am</span> / <span>00:00:02:971</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,10 +89,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Click All Links on Homepage</h5>
-<span class='badge badge-success'>06.02.2025 6:24:07 pm</span>
-<span class='badge badge-danger'>06.02.2025 6:24:10 pm</span>
-<span class='badge badge-default'>00:00:02:876</span>
+<h5 class="test-status text-pass">Image Count on Home Page</h5>
+<span class='badge badge-success'>06.03.2025 11:11:02 am</span>
+<span class='badge badge-danger'>06.03.2025 11:11:05 am</span>
+<span class='badge badge-default'>00:00:02:971</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -103,10 +103,21 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>6:24:10 pm</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:11:04 am</td>
         <td>
-          Total clickable links found: 0
+          Total images found on home page: 0
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:11:05 am</td>
+        <td>
+          Screenshot attached
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='screenshots/image_count_success_20250603_111104.png' src="screenshots/image_count_success_20250603_111104.png">
+    
+    </div></div>
         </td>
       </tr>
   </tbody>
@@ -128,13 +139,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jun 2, 2025 06:24:03 pm</h3>
+<h3>Jun 3, 2025 11:10:58 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jun 2, 2025 06:24:10 pm</h3>
+<h3>Jun 3, 2025 11:11:05 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -185,7 +196,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
+<div><small data-tooltip='50%'><b>1</b> events passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> events failed,
 <b data-tooltip='%'>1</b> others
@@ -204,7 +215,7 @@
 </div></div>
 <script>
 var timeline = {
-"Click All Links on Homepage":2.876
+"Image Count on Home Page":2.971
 };
 </script>
 <div class="row">
@@ -230,7 +241,7 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 0,
+passEvents: 1,
 failEvents: 0,
 warningEvents: 0,
 skipEvents: 0,

@@ -18,8 +18,8 @@ public class ExtentReportManager {
     public static ExtentReports getReportInstance() {
         if (extent == null) {
             ExtentSparkReporter sparkReporter = new ExtentSparkReporter("reports/ExtentReport.html");
-            sparkReporter.config().setReportName("UI Test Report");
-            sparkReporter.config().setDocumentTitle("Automation Report");
+            sparkReporter.config().setReportName("Automation Test Report");
+            sparkReporter.config().setDocumentTitle("Image Count Test");
 
             extent = new ExtentReports();
             extent.attachReporter(sparkReporter);
