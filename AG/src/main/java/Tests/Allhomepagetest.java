@@ -22,7 +22,7 @@ public class Allhomepagetest {
     private ExtentReports extent;
     private ExtentTest test;
 
-    private final String homeUrl = "https://weisetech.dev/adventuregamers/";
+    private final String homeUrl = "https://development:development@weisetech.dev/adventuregamers/daily-deals/";
 
     @BeforeClass
     public void setupReport() {

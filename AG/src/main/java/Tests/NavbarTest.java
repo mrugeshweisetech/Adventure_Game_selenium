@@ -19,7 +19,7 @@ public class NavbarTest {
     private ExtentReports extent;
     private ExtentTest test;
 
-    private final String baseUrl = "https://weisetech.dev/adventuregamers/";
+    private final String baseUrl = "https://development:development@weisetech.dev/adventuregamers/daily-deals/";
 
     @BeforeClass
     public void setupReport() {
