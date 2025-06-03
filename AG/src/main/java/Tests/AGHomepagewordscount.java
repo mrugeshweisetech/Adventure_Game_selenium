@@ -11,7 +11,7 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Homepagewordscount {
+public class AGHomepagewordscount {
 
     WebDriver driver;
     ExtentReports extent;
@@ -45,7 +45,7 @@ public class Homepagewordscount {
             System.out.println("Total words: " + wordCount);
 
             String ss = takeScreenshot("word_count");
-            test.info("📸 Screenshot", MediaEntityBuilder.createScreenCaptureFromPath(ss).build());
+            test.info("Screenshot", MediaEntityBuilder.createScreenCaptureFromPath(ss).build());
 
         } catch (Exception e) {
             String ss = takeScreenshot("word_count_error");

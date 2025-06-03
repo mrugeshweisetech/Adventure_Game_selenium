@@ -13,7 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-public class Sectionboxcounttest {
+public class AGSectionboxcounttest {
 
     WebDriver driver;
     ExtentReports extent;

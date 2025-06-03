@@ -15,7 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-public class Homeimagecounttest {
+public class AGHomeimagecounttest {
 
     private WebDriver driver;
     private ExtentReports extent;

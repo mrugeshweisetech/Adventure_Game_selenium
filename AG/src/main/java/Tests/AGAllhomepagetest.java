@@ -8,7 +8,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 import utils.ExtentReportManager;
-
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -16,7 +15,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Allhomepagetest {
+public class AGAllhomepagetest {
 
     private WebDriver driver;
     private ExtentReports extent;

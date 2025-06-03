@@ -13,7 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-public class NavbarTest {
+public class AGNavbarTest {
 
     private WebDriver driver;
     private ExtentReports extent;
