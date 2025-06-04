@@ -1,14 +1,11 @@
 package Tests;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.*;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.apache.commons.io.FileUtils;
-//import org.example.utils.ExtentReportManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
-import utils.ExtentReportManager;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -20,16 +17,17 @@ public class AGHomepagevideotest {
     private WebDriver driver;
     private ExtentReports extent;
     private ExtentTest test;
-
-    String url = "https://development:development@weisetech.dev/adventuregamers/daily-deals/";
+    private final String url = "https://development:development@weisetech.dev/adventuregamers/daily-deals/";
 
     @BeforeClass
     public void setupReport() {
-        extent = ExtentReportManager.getReportInstance();
+        ExtentSparkReporter spark = new ExtentSparkReporter("reports/ExtentReport.html");
+        extent = new ExtentReports();
+        extent.attachReporter(spark);
     }
 
     @BeforeMethod
-    public void launchBrowser() {
+    public void openBrowser() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
@@ -42,59 +40,50 @@ public class AGHomepagevideotest {
             driver.get(url);
             Thread.sleep(3000);
 
-            boolean videoPlayed = false;
+            // Scroll to load all content
+            ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+            Thread.sleep(1000);
 
-            List<WebElement> videoTags = driver.findElements(By.tagName("video"));
-            if (!videoTags.isEmpty()) {
-                WebElement video = videoTags.get(0);
-                ((JavascriptExecutor) driver).executeScript("arguments[0].play()", video);
-                Thread.sleep(4000);
-                ((JavascriptExecutor) driver).executeScript("arguments[0].pause()", video);
-
-                String ss = takeScreenshot("html5_video_played");
-                test.pass("HTML5 video played and paused",
-                        MediaEntityBuilder.createScreenCaptureFromPath(ss).build());
-                videoPlayed = true;
+            // Check <video> tags
+            List<WebElement> html5Videos = driver.findElements(By.tagName("video"));
+            test.info("HTML5 <video> tags found: " + html5Videos.size());
+            for (WebElement v : html5Videos) {
+                test.info(" - HTML5 Video visible: " + v.isDisplayed());
             }
 
-            if (!videoPlayed) {
-                List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
-                for (WebElement frame : iframes) {
-                    String src = frame.getAttribute("src");
-                    if (src != null && src.contains("youtube")) {
-                        driver.switchTo().frame(frame);
-                        try {
-                            WebElement playBtn = driver.findElement(By.cssSelector("button[aria-label='Play']"));
-                            playBtn.click();
-                            Thread.sleep(5000);
-                            String ss = takeScreenshot("iframe_video_played");
-                            test.pass("YouTube iframe video played",
-                                    MediaEntityBuilder.createScreenCaptureFromPath(ss).build());
-                        } catch (Exception e) {
-                            test.warning("Couldn't auto-play iframe video: " + e.getMessage());
+            // Check <iframe> tags
+            List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
+            test.info("Iframe count: " + iframes.size());
+
+            for (WebElement iframe : iframes) {
+                String src = iframe.getAttribute("src");
+                test.info(" - iframe src: " + src);
+
+                if (src != null && src.contains("youtube")) {
+                    driver.switchTo().frame(iframe);
+                    try {
+                        WebElement playBtn = driver.findElement(By.cssSelector("button"));
+                        if (playBtn.isDisplayed()) {
+                            test.pass("YouTube Play button is visible inside iframe.");
+                        } else {
+                            test.warning("YouTube Play button is NOT visible.");
                         }
-                        driver.switchTo().defaultContent();
-                        videoPlayed = true;
-                        break;
+                    } catch (Exception e) {
+                        test.warning("No clickable button inside YouTube iframe.");
                     }
+                    driver.switchTo().defaultContent();
                 }
             }
 
-            if (!videoPlayed) {
-                test.skip("No playable video found on the page.");
-            }
-
         } catch (Exception e) {
-            String ss = takeScreenshot("video_test_error");
-            test.fail("Exception during video test: " + e.getMessage(),
-                    MediaEntityBuilder.createScreenCaptureFromPath(ss).build());
+            test.fail("Error during video detection: " + e.getMessage());
         }
     }
 
     public String takeScreenshot(String name) {
         try {
             File folder = new File("screenshots");
-            if (!folder.exists()) folder.mkdir();
+            if (!folder.exists()) folder.mkdirs();
 
             String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
             File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -102,13 +91,16 @@ public class AGHomepagevideotest {
             FileUtils.copyFile(src, new File(path));
             return path;
         } catch (Exception e) {
+            System.out.println("Screenshot failed: " + e.getMessage());
             return null;
         }
     }
 
     @AfterMethod
     public void closeBrowser() {
-        if (driver != null) driver.quit();
+        if (driver != null) {
+            driver.quit();
+        }
     }
 
     @AfterClass

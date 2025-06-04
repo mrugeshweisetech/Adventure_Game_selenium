@@ -48,7 +48,7 @@ public class Footerlinktest {
 
             for (int i = 0; i < total; i++) {
                 try {
-                 
+
                     driver.get(baseUrl);
                     Thread.sleep(2000);
                     ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
