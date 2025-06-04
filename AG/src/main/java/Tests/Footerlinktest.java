@@ -40,36 +40,43 @@ public class Footerlinktest {
             ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
             Thread.sleep(1500);
 
-            List<WebElement> footerLinks = driver.findElements(By.cssSelector("footer a"));
+            List<WebElement> footerLinks = driver.findElements(By.cssSelector("ul#menu-footer-menu li a"));
 
             int total = footerLinks.size();
             test.info("Total footer links found: " + total);
+            System.out.println("Found footer links: " + total);
 
             for (int i = 0; i < total; i++) {
                 try {
+                 
                     driver.get(baseUrl);
                     Thread.sleep(2000);
-
                     ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
                     Thread.sleep(1500);
 
-                    footerLinks = driver.findElements(By.cssSelector("footer a"));
+                    footerLinks = driver.findElements(By.cssSelector("ul#menu-footer-menu li a"));
                     WebElement link = footerLinks.get(i);
+
                     String linkText = link.getText().trim();
-                    if (linkText.isEmpty()) linkText = link.getAttribute("href");
+                    String href = link.getAttribute("href");
 
-                    link.click();
-                    Thread.sleep(2000);
+                    if (href != null && !href.trim().isEmpty()) {
+                        link.click();
+                        Thread.sleep(3000);
 
-                    test.pass("Clicked footer link: " + linkText + " | Page title: " + driver.getTitle());
-
+                        test.pass(" Clicked footer link: '" + linkText + "' | Title: " + driver.getTitle());
+                        driver.navigate().back();
+                        Thread.sleep(2000);
+                    } else {
+                        test.warning(" Skipped link with no href at index " + i);
+                    }
                 } catch (Exception e) {
-                    test.fail("Failed to click footer link " + i + ": " + e.getMessage());
+                    test.fail("Error clicking footer link " + i + ": " + e.getMessage());
                 }
             }
 
         } catch (Exception e) {
-            test.fail("Error during footer menu test: " + e.getMessage());
+            test.fail("Exception during footer test setup: " + e.getMessage());
         }
     }
 
