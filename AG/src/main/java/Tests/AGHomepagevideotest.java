@@ -52,7 +52,7 @@ public class AGHomepagevideotest {
             }
 
             // Check <iframe> tags
-            List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
+            List<WebElement> iframes = driver.findElements(By.tagName("home-flex video-flex home-video-section"));
             test.info("Iframe count: " + iframes.size());
 
             for (WebElement iframe : iframes) {
@@ -62,7 +62,7 @@ public class AGHomepagevideotest {
                 if (src != null && src.contains("youtube")) {
                     driver.switchTo().frame(iframe);
                     try {
-                        WebElement playBtn = driver.findElement(By.cssSelector("button"));
+                        WebElement playBtn = driver.findElement(By.cssSelector("home-flex video-flex home-video-section"));
                         if (playBtn.isDisplayed()) {
                             test.pass("YouTube Play button is visible inside iframe.");
                         } else {

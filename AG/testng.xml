@@ -4,7 +4,7 @@
 <suite name="AGSuitProject ">
     <test name="Home Page Test">
         <classes>
-            <class name = "Tests.Footerlinktest"/>
+            <class name = "Tests.AGinnerpageimagetest"/>
         </classes>
     </test>
 </suite>
