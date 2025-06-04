@@ -42,7 +42,7 @@ public class AGSectionboxcounttest {
             driver.get("https://development:development@weisetech.dev/adventuregamers/daily-deals/");
             Thread.sleep(2000);
 
-            List<WebElement> boxes = driver.findElements(By.cssSelector(".forum_threads"));
+            List<WebElement> boxes = driver.findElements(By.cssSelector(".newrelease_box"));
             int actualCount = boxes.size();
 
             test.info("Expected box count: " + expectedBoxCount);

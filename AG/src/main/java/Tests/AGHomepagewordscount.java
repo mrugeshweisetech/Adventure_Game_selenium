@@ -77,4 +77,8 @@ public class AGHomepagewordscount {
     public void flushReport() {
         extent.flush();
     }
+
 }
+
+
+
