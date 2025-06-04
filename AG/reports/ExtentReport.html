@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jun 4, 2025 03:10:34 pm</span></a>
+<a href="#"><span class="badge badge-primary">Jun 4, 2025 03:54:39 pm</span></a>
 </li>
 </ul>
 </div>
@@ -79,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Word Count in Inner Article Test</p>
+            <p class="name">Click All Links on Page</p>
             <p class="text-sm">
-              <span>3:10:37 pm</span> / <span>00:00:09:879</span>
+              <span>3:54:43 pm</span> / <span>00:28:28:050</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -89,10 +89,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Word Count in Inner Article Test</h5>
-<span class='badge badge-success'>06.04.2025 3:10:37 pm</span>
-<span class='badge badge-danger'>06.04.2025 3:10:47 pm</span>
-<span class='badge badge-default'>00:00:09:879</span>
+<h5 class="test-status text-fail">Click All Links on Page</h5>
+<span class='badge badge-success'>06.04.2025 3:54:43 pm</span>
+<span class='badge badge-danger'>06.04.2025 4:23:11 pm</span>
+<span class='badge badge-default'>00:28:28:050</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -104,18 +104,499 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>3:10:47 pm</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:54:57 pm</td>
         <td>
-          Exception occurred: no such element: Unable to locate element: {"method":"css selector","selector":"article-news-info"}
-  (Session info: chrome=137.0.7151.68)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+          Total unique clickable links: 67
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:57:57 pm</td>
+        <td>
+           [1] Failed to open: https://weisetech.dev/adventuregamers | Error: java.util.concurrent.TimeoutException
 Build info: version: '4.32.0', revision: 'd17c8aa950'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.7.6', java.version: '24.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ef6f9e6fec812883ac12c8a8ec6ae12f, findElement {value=article-news-info, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.68, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: /var/folders/cx/lypg9w856yx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50367}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50367/devtoo..., se:cdpVersion: 137.0.7151.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ef6f9e6fec812883ac12c8a8ec6ae12f
+Command: [720b57acfda4c0680e8ad4b37afa2e5c, get {url=https://weisetech.dev/adventuregamers}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.68, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: /var/folders/cx/lypg9w856yx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51988}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51988/devtoo..., se:cdpVersion: 137.0.7151.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 720b57acfda4c0680e8ad4b37afa2e5c
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:00:01 pm</td>
+        <td>
+          [2] Clicked: https://weisetech.dev/adventuregamers/articles | Title: Adventure game articles | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:00:05 pm</td>
+        <td>
+          [3] Clicked: https://weisetech.dev/adventuregamers/article/elroy-and-the-aliens# | Title: Elroy and the Aliens review | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:00:10 pm</td>
+        <td>
+          [4] Clicked: https://weisetech.dev/adventuregamers/article-type/reviews | Title: Adventure game reviews | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:00:18 pm</td>
+        <td>
+          [5] Clicked: https://weisetech.dev/adventuregamers/article-type/preview | Title: Adventure game previews | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:00:41 pm</td>
+        <td>
+          [6] Clicked: https://weisetech.dev/adventuregamers/article-type/feature | Title: Adventure game features | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:00:48 pm</td>
+        <td>
+          [7] Clicked: https://weisetech.dev/adventuregamers/article-type/interview | Title: Adventure game interviews | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:00:51 pm</td>
+        <td>
+          [8] Clicked: https://weisetech.dev/adventuregamers/recurring-articles | Title: Overview of recurring articles on Adventure Games | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:01:00 pm</td>
+        <td>
+          [9] Clicked: https://weisetech.dev/adventuregamers/latest-news | Title: Latest Adventure Game News | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:01:04 pm</td>
+        <td>
+          [10] Clicked: https://weisetech.dev/adventuregamers/aggie-awards/ | Title: The Adventure Gamers' Aggie Awards
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:01:47 pm</td>
+        <td>
+          [11] Clicked: https://weisetech.dev/adventuregamers/article/what_are_adventure_games | Title: What are adventure games? | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:03:21 pm</td>
+        <td>
+          [12] Clicked: https://weisetech.dev/adventuregamers/article/top_100_all-time_adventure_games | Title: Top 100 All-Time Adventure Games | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:03:25 pm</td>
+        <td>
+          [13] Clicked: https://weisetech.dev/adventuregamers/screenshots | Title: Latest Screenshots for upcoming Adventure games | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:06:06 pm</td>
+        <td>
+          [14] Clicked: https://weisetech.dev/adventuregamers/videos | Title: Adventure game Trailers, Teasers & Videos | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:06:18 pm</td>
+        <td>
+          [15] Clicked: https://weisetech.dev/adventuregamers/adventure/all/ | Title: The Adventure Games Database | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:06:23 pm</td>
+        <td>
+          [16] Clicked: https://weisetech.dev/adventuregamers/discover | Title: Discover Adventure Games
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:06:27 pm</td>
+        <td>
+          [17] Clicked: https://weisetech.dev/adventuregamers/adventure/all | Title: The Adventure Games Database | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:06:51 pm</td>
+        <td>
+          [18] Clicked: https://weisetech.dev/adventuregamers/topreviewed | Title: Highest rated Adventure Games | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:06:57 pm</td>
+        <td>
+          [19] Clicked: https://weisetech.dev/adventuregamers/newreleases | Title: New Adventure Games (2025)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:07:01 pm</td>
+        <td>
+          [20] Clicked: https://weisetech.dev/adventuregamers/upcoming | Title: Upcoming Adventure Game Releases (2025)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:07:05 pm</td>
+        <td>
+          [21] Clicked: https://weisetech.dev/adventuregamers/crowdfunding/ | Title: Adventure Games looking for Crowdfunding
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:07:22 pm</td>
+        <td>
+          [22] Clicked: https://weisetech.dev/adventuregamers/top-games/best-pc-adventure-games | Title: Top list of Best Adventure Games on PC (2025) | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:07:34 pm</td>
+        <td>
+          [23] Clicked: https://weisetech.dev/adventuregamers/top-games/best-adventure-games-for-steam-deck | Title: Best Adventure Games for Steam Deck - Top Picks and Reviews | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:09:00 pm</td>
+        <td>
+          [24] Clicked: https://weisetech.dev/adventuregamers/top-games/best-pc-point-and-click-games | Title: Best Adventure Games - Best Point and Click Adventure Games | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:09:21 pm</td>
+        <td>
+          [25] Clicked: https://weisetech.dev/adventuregamers/top-games/indie | Title: Best Adventure Games - Indie | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:09:44 pm</td>
+        <td>
+          [26] Clicked: https://weisetech.dev/adventuregamers/top-games/iphone_and_ipad | Title: Best Adventure Games - iOS - iPhone / iPad | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:10:16 pm</td>
+        <td>
+          [27] Clicked: https://weisetech.dev/adventuregamers/top-games/nintendo | Title: Best Adventure Games - Nintendo Switch | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:10:31 pm</td>
+        <td>
+          [28] Clicked: https://weisetech.dev/adventuregamers/top-games/playstation | Title: Best Adventure Games - PlayStation - PS4 / PS5 | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:10:37 pm</td>
+        <td>
+          [29] Clicked: https://weisetech.dev/adventuregamers/top-games/virtual-reality | Title: Best Adventure Games - Virtual Reality | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:12:11 pm</td>
+        <td>
+          [30] Clicked: https://weisetech.dev/adventuregamers/top-games/xbox | Title: Best Adventure Games - Xbox - Series X|S / One | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:12:37 pm</td>
+        <td>
+          [31] Clicked: https://weisetech.dev/adventuregamers/daily-deals | Title: Daily deals on adventure games
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:13:22 pm</td>
+        <td>
+          [32] Clicked: https://weisetech.dev/adventuregamers/walkthrough/ | Title: Adventure Game Walkthrough Database | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:13:29 pm</td>
+        <td>
+          [33] Clicked: https://weisetech.dev/adventuregamers/topgames/ | Title: Best Adventure Games | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:13:35 pm</td>
+        <td>
+          [34] Clicked: https://weisetech.dev/adventuregamers/articles/ | Title: Adventure game articles | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:13:38 pm</td>
+        <td>
+          [35] Clicked: https://weisetech.dev/adventuregamers/author/adventuregamers | Title: AG Staff, Author at Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:13:42 pm</td>
+        <td>
+          [36] Clicked: https://weisetech.dev/adventuregamers/wp-content/uploads/images/screenshots/31140/eata1.jpg | Title: 404 Not Found
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:14:33 pm</td>
+        <td>
+          [37] Clicked: https://weisetech.dev/adventuregamers/screenshot/elroy-and-the-aliens | Title: Elroy and the Aliens - Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:14:36 pm</td>
+        <td>
+          [38] Clicked: https://weisetech.dev/adventuregamers/wp-content/uploads/images/screenshots/31140/eata2.jpg | Title: 404 Not Found
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:15:59 pm</td>
+        <td>
+          [39] Clicked: https://weisetech.dev/adventuregamers/games/elroy-and-the-aliens | Title: Elroy and the Aliens (2025) - Game details | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:16:05 pm</td>
+        <td>
+          [40] Clicked: https://weisetech.dev/adventuregamers/?companies=motiviti | Title: Adventure games by Motiviti | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:17:20 pm</td>
+        <td>
+           [41] Failed to open: https://store.steampowered.com/app/1082190/Elroy_And_The_Aliens/?utm_source=adventuregamers&utm_medium=storelinks&utm_campaign=homepage | Error: unknown error: net::ERR_CONNECTION_TIMED_OUT
+  (Session info: chrome=137.0.7151.68)
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.7.6', java.version: '24.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [720b57acfda4c0680e8ad4b37afa2e5c, get {url=https://store.steampowered.com/app/1082190/Elroy_And_The_Aliens/?utm_source=adventuregamers&utm_medium=storelinks&utm_campaign=homepage}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.68, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: /var/folders/cx/lypg9w856yx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51988}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51988/devtoo..., se:cdpVersion: 137.0.7151.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 720b57acfda4c0680e8ad4b37afa2e5c
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:18:35 pm</td>
+        <td>
+           [42] Failed to open: https://af.gog.com/en/game/elroy_and_the_aliens?as=1639373398 | Error: unknown error: net::ERR_CONNECTION_TIMED_OUT
+  (Session info: chrome=137.0.7151.68)
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.7.6', java.version: '24.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [720b57acfda4c0680e8ad4b37afa2e5c, get {url=https://af.gog.com/en/game/elroy_and_the_aliens?as=1639373398}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.68, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: /var/folders/cx/lypg9w856yx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51988}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51988/devtoo..., se:cdpVersion: 137.0.7151.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 720b57acfda4c0680e8ad4b37afa2e5c
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:18:41 pm</td>
+        <td>
+          [43] Clicked: https://weisetech.dev/adventuregamers/article/elroy-and-the-aliens?ac=gEo3UwoFdvG | Title: Elroy and the Aliens review | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:18:44 pm</td>
+        <td>
+          [44] Clicked: https://weisetech.dev/adventuregamers/about/scoring | Title: Scoring System | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:18:48 pm</td>
+        <td>
+          [45] Clicked: https://weisetech.dev/adventuregamers/about/policies | Title: Editorial Policies | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:18:59 pm</td>
+        <td>
+          [46] Clicked: https://weisetech.dev/adventuregamers/platform/linux | Title: Linux Archives - Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:19:16 pm</td>
+        <td>
+          [47] Clicked: https://weisetech.dev/adventuregamers/platform/mac | Title: Mac Archives - Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:19:49 pm</td>
+        <td>
+          [48] Clicked: https://weisetech.dev/adventuregamers/platform/pc | Title: PC Archives - Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:19:54 pm</td>
+        <td>
+          [49] Clicked: https://weisetech.dev/adventuregamers/article/brassheart | Title: Brassheart review | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:19:58 pm</td>
+        <td>
+          [50] Clicked: https://weisetech.dev/adventuregamers/article/neon-hearts-city | Title: Neon Hearts City review | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:20:11 pm</td>
+        <td>
+          [51] Clicked: https://weisetech.dev/adventuregamers/article/these-darker-tides | Title: These Darker Tides review | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:20:15 pm</td>
+        <td>
+          [52] Clicked: https://weisetech.dev/adventuregamers/article/lost-records-bloom-rage-tape-2 | Title: Lost Records: Bloom & Rage - Tape 2 review | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:20:22 pm</td>
+        <td>
+          [53] Clicked: https://weisetech.dev/adventuregamers/article/old-skies-review | Title: Old Skies review | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:20:32 pm</td>
+        <td>
+          [54] Clicked: https://weisetech.dev/adventuregamers/article/rosewater | Title: Rosewater review | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:20:38 pm</td>
+        <td>
+          [55] Clicked: https://weisetech.dev/adventuregamers/article/amerzone-the-explorers-legacy | Title: Amerzone - The Explorer's Legacy (2025) review | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:20:43 pm</td>
+        <td>
+          [56] Clicked: https://weisetech.dev/adventuregamers/article/vlad-circus-descend-into-madness | Title: Vlad Circus: Descend Into Madness review | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:20:50 pm</td>
+        <td>
+          [57] Clicked: https://weisetech.dev/adventuregamers/article/carmen-sandiego-2025 | Title: Carmen Sandiego (2025) review | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:20:57 pm</td>
+        <td>
+          [58] Clicked: https://donvigames.com/ | Title: DONVI Games - Navigating the Worlds of Gaming
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:21:00 pm</td>
+        <td>
+          [59] Clicked: https://weisetech.dev/adventuregamers/about | Title: About Adventure Gamers | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:21:13 pm</td>
+        <td>
+          [60] Clicked: https://weisetech.dev/adventuregamers/about/team | Title: The team behind Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:21:16 pm</td>
+        <td>
+          [61] Clicked: https://weisetech.dev/adventuregamers/about/become-a-writer | Title: Write for Adventure Gamers | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:21:22 pm</td>
+        <td>
+          [62] Clicked: https://weisetech.dev/adventuregamers/about/site-history | Title: Site History | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:21:25 pm</td>
+        <td>
+          [63] Clicked: https://weisetech.dev/adventuregamers/about/advertising | Title: Advertise on Adventure Gamers | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:21:29 pm</td>
+        <td>
+          [64] Clicked: https://weisetech.dev/adventuregamers/about/contact-us | Title: Contact Adventure Gamers | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:21:32 pm</td>
+        <td>
+          [65] Clicked: https://weisetech.dev/adventuregamers/about/privacy | Title: Privacy Policy | Adventure Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:21:45 pm</td>
+        <td>
+          [66] Clicked: https://rpggamers.com/ | Title: Embark on a journey through the world of RPGs | RPG Gamers
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:23:11 pm</td>
+        <td>
+          [67] Clicked: https://justadventure.com/ | Title: Just Adventure
         </td>
       </tr>
   </tbody>
@@ -137,13 +618,13 @@ Session ID: ef6f9e6fec812883ac12c8a8ec6ae12f
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jun 4, 2025 03:10:34 pm</h3>
+<h3>Jun 4, 2025 03:54:39 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jun 4, 2025 03:10:48 pm</h3>
+<h3>Jun 4, 2025 04:23:12 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -194,10 +675,10 @@ Session ID: ef6f9e6fec812883ac12c8a8ec6ae12f
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
+<div><small data-tooltip='94%'><b>64</b> events passed</small></div>
 <div>
-<small data-tooltip='100%'><b>1</b> events failed,
-<b data-tooltip='%'>0</b> others
+<small data-tooltip='4%'><b>3</b> events failed,
+<b data-tooltip='%'>1</b> others
 </small>
 </div>
 </div>
@@ -213,7 +694,7 @@ Session ID: ef6f9e6fec812883ac12c8a8ec6ae12f
 </div></div>
 <script>
 var timeline = {
-"Word Count in Inner Article Test":9.879
+"Click All Links on Page":1708.05
 };
 </script>
 <div class="row">
@@ -239,11 +720,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 0,
-failEvents: 1,
+passEvents: 64,
+failEvents: 3,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 0
+infoEvents: 1
 };
 </script>        </div>
       </div>

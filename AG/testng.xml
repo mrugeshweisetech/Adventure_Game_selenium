@@ -4,9 +4,9 @@
 <suite name="AGSuitProject ">
     <test name="Home Page Test">
         <classes>
-            <class name = "Tests.AGinnerpagewordcounttest"/>
+            <class name = "Tests.AGinnerpagelinktest"/>
         </classes>
-    </test>
+    </test>`
 </suite>
 
 
