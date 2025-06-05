@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jun 5, 2025 11:09:37 am</span></a>
+<a href="#"><span class="badge badge-primary">Jun 5, 2025 11:41:06 am</span></a>
 </li>
 </ul>
 </div>
@@ -79,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Count & Validate Game Cards on PC Category Page</p>
+            <p class="name">Pagination Validation Test - PC Games</p>
             <p class="text-sm">
-              <span>11:09:41 am</span> / <span>00:00:19:027</span>
+              <span>11:41:10 am</span> / <span>00:00:18:307</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -89,10 +89,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Count & Validate Game Cards on PC Category Page</h5>
-<span class='badge badge-success'>06.05.2025 11:09:41 am</span>
-<span class='badge badge-danger'>06.05.2025 11:10:00 am</span>
-<span class='badge badge-default'>00:00:19:027</span>
+<h5 class="test-status text-fail">Pagination Validation Test - PC Games</h5>
+<span class='badge badge-success'>06.05.2025 11:41:10 am</span>
+<span class='badge badge-danger'>06.05.2025 11:41:28 am</span>
+<span class='badge badge-default'>00:00:18:307</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -105,16 +105,23 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:10:00 am</td>
+        <td>11:41:19 am</td>
         <td>
-          Total game cards found: 0
+          Cards on Page 1: 0
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:28 am</td>
+        <td>
+          Cards on Page 2: 0
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:10:00 am</td>
+        <td>11:41:28 am</td>
         <td>
-          Game card count mismatch. Expected: 9, Found: 0
+          Pagination did not load new content properly.
         </td>
       </tr>
   </tbody>
@@ -136,13 +143,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jun 5, 2025 11:09:37 am</h3>
+<h3>Jun 5, 2025 11:41:06 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jun 5, 2025 11:10:00 am</h3>
+<h3>Jun 5, 2025 11:41:28 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -195,8 +202,8 @@
 <div class="card-footer">
 <div><small data-tooltip='0%'><b>0</b> events passed</small></div>
 <div>
-<small data-tooltip='50%'><b>1</b> events failed,
-<b data-tooltip='%'>1</b> others
+<small data-tooltip='33%'><b>1</b> events failed,
+<b data-tooltip='%'>2</b> others
 </small>
 </div>
 </div>
@@ -212,7 +219,7 @@
 </div></div>
 <script>
 var timeline = {
-"Count & Validate Game Cards on PC Category Page":19.027
+"Pagination Validation Test - PC Games":18.307
 };
 </script>
 <div class="row">
@@ -242,7 +249,7 @@ passEvents: 0,
 failEvents: 1,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 1
+infoEvents: 2
 };
 </script>        </div>
       </div>
