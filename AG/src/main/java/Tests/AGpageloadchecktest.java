@@ -39,8 +39,8 @@ public class AGpageloadchecktest {
             long endTime = System.currentTimeMillis();
             long loadTime = endTime - startTime;
 
-            test.info("Page loaded in: " + loadTime + " ms");
-            System.out.println("Page load time: " + loadTime + " ms");
+            test.info("Page loaded in: " + loadTime + " s");
+            System.out.println("Page load time: " + loadTime + " s");
 
             long threshold = 3000;
 
