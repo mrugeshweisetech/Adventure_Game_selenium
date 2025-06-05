@@ -4,7 +4,7 @@
 <suite name="AGSuitProject ">
     <test name="Home Page Test">
         <classes>
-            <class name = "Tests.AGtitleclickinnertest"/>
+            <class name = "Tests.AGpageloadchecktest"/>
         </classes>
     </test>
 </suite>
