@@ -53,7 +53,6 @@ public class AGpcgamecardcounttest {
                 test.fail("Game card count mismatch. Expected: " + expectedCardCount + ", Found: " + actualCount);
             }
 
-            // Optional: fail test if count is wrong
             Assert.assertEquals(actualCount, expectedCardCount, "Game card count validation failed!");
 
         } catch (Exception e) {
