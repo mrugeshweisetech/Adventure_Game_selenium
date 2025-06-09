@@ -6,11 +6,9 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
-public class AGgenreintropagelinkprint {
+public class AGfootermenuprinttest {
 
     WebDriver driver;
     ExtentReports extent;
@@ -26,40 +24,38 @@ public class AGgenreintropagelinkprint {
     }
 
     @BeforeMethod
-    public void launchBrowser() {
+    public void openBrowser() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
     @Test
-    public void printAllValidLinks() {
-        test = extent.createTest("Print All Valid Links - Generic Page");
+    public void printFooterLinkNames() {
+        test = extent.createTest("Print All Footer Link Names - Daily Deals");
 
         try {
             driver.get(url);
             Thread.sleep(2000);
 
-            List<WebElement> allLinks = driver.findElements(By.tagName("a"));
-            Set<String> uniqueLinks = new HashSet<>();
+            ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+            Thread.sleep(1500);
 
-            test.info("Total anchor tags found: " + allLinks.size());
+            WebElement footer = driver.findElement(By.className("Footer"));
 
-            for (WebElement link : allLinks) {
-                String href = link.getAttribute("href");
+            List<WebElement> footerLinks = footer.findElements(By.className("fmenu1 fmenu"));
 
-                if (href != null && !href.trim().isEmpty() && !href.startsWith("javascript")) {
-                    if (!uniqueLinks.contains(href)) {
-                        System.out.println(href);
-                        test.pass("Link found: " + href);
-                        uniqueLinks.add(href);
-                    }
+            test.info("Total footer links found: " + footerLinks.size());
+
+            for (WebElement link : footerLinks) {
+                String text = link.getText().trim();
+                if (!text.isEmpty()) {
+                    System.out.println( "" + text);
+                    test.pass("Footer link: " + text);
                 }
             }
 
-            test.info("Total unique, valid links printed: " + uniqueLinks.size());
-
         } catch (Exception e) {
-            test.fail("Exception during link extraction: " + e.getMessage());
+            test.fail("Exception during footer link name extraction: " + e.getMessage());
         }
     }
 
