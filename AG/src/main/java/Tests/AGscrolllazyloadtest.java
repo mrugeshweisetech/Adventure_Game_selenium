@@ -43,7 +43,7 @@ public class AGscrolllazyloadtest {
                 scrollCount++;
                 js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
                 test.info("Scrolled to bottom - attempt #" + scrollCount);
-                Thread.sleep(2000); // Allow time for lazy content to load
+                Thread.sleep(2000);
 
                 long newHeight = (long) js.executeScript("return document.body.scrollHeight");
 

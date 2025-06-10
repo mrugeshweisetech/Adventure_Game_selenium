@@ -36,6 +36,10 @@ public class AGsearchicontest {
             driver.get(url);
             Thread.sleep(2000);
 
+            WebElement searchIcon = driver.findElement(By.cssSelector("button.search-submit"));
+            searchIcon.click();
+            Thread.sleep(1000);
+
             WebElement searchBox = driver.findElement(By.cssSelector("input[type='search']"));
             searchBox.sendKeys(searchKeyword);
             searchBox.sendKeys(Keys.ENTER);
@@ -43,14 +47,13 @@ public class AGsearchicontest {
             Thread.sleep(3000);
 
             String title = driver.getTitle();
-            String pageText = driver.findElement(By.tagName("body")).getText();
+            String bodyText = driver.findElement(By.tagName("body")).getText();
 
             if (title.toLowerCase().contains(searchKeyword.toLowerCase()) ||
-                    pageText.toLowerCase().contains(searchKeyword.toLowerCase())) {
-
+                    bodyText.toLowerCase().contains(searchKeyword.toLowerCase())) {
                 test.pass("Search successful. Keyword '" + searchKeyword + "' found in results.");
             } else {
-                test.fail(" Search failed. Keyword '" + searchKeyword + "' not found.");
+                test.fail("Search failed. Keyword '" + searchKeyword + "' not found.");
             }
 
         } catch (Exception e) {
