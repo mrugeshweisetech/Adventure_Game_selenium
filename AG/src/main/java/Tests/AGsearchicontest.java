@@ -69,5 +69,6 @@ public class AGsearchicontest {
     @AfterClass
     public void flushReport() {
         extent.flush();
+        extent.flush();
     }
 }
